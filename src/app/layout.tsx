@@ -1,6 +1,9 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
+import LeftBar from "@/layouts/left-bar/LeftBar";
+import Header from "@/layouts/header/Header";
+import MainContent from "@/layouts/main-content/MainContent";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -27,7 +30,20 @@ export default function RootLayout({
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
-        {children}
+        <div className="h-screen w-screen flex flex-col">
+          <Header appName="Note Đi Pls" />
+          <div className="flex flex-row w-full h-full">
+            <div className="h-full" style={{ width: "400px" }}>
+              <LeftBar />
+            </div>
+            <div
+              className={`transition-all duration-500 h-full pr-2 pb-2`}
+              style={{ width: "calc(100% - 400px)" }}
+            >
+              <MainContent>{children}</MainContent>
+            </div>
+          </div>
+        </div>
       </body>
     </html>
   );
