@@ -1,13 +1,14 @@
 This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
 
 ## Getting Started
+First, Clone the project to local.
 
-First, run the frontend environment:
+Second, run the frontend environment:
 
 ```bash
 $ npm run dev
 ```
-Second, run the backend environment:
+Third, navigate to backend folder, run the backend environment:
 
 ```bash
 $ npm run start
