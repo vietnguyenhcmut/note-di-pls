@@ -1,6 +1,20 @@
+"use client";
+
 import NoteItem from "./note-item/NoteItem";
 import { noteTypes } from "../select-note-types/SelectNoteTypes";
+import { useEffect, useState } from "react";
+import { getListNotes } from "@/services/notes/get-list-notes/getListNotes";
+
 const ListNotes = () => {
+  const [listNotes, setListNotes] = useState([]);
+  useEffect(() => {
+    const res = getListNotes();
+    res.then((data) => {
+      setListNotes(data);
+    });
+  }, []);
+  console.log(listNotes);
+
   return (
     <div className="flex flex-col gap-2">
       <NoteItem
@@ -22,7 +36,7 @@ const ListNotes = () => {
         date={new Date()}
       />
       <NoteItem
-        noteType={noteTypes[3]}
+        noteType={noteTypes[4]}
         title="Đám cưới B ngày xx/xx/xxxx"
         brief="Mừng cưới 100.000đ"
         date={new Date()}

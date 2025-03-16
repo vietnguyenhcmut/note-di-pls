@@ -11,31 +11,31 @@ export const noteTypes: NoteTypeProps[] = [
     value: "gold",
     label: "Công việc",
     customTailwindTextTransparentColor:
-      "bg-clip-text text-transparent bg-gradient-to-r from-yellow-500 to-black",
+      "bg-clip-text text-transparent bg-gradient-to-r from-yellow-500 to-orange-300",
   },
   {
-    value: "lime",
+    value: "cyan",
     label: "Sự kiện",
     customTailwindTextTransparentColor:
-      "bg-clip-text text-transparent bg-gradient-to-r from-green-500 to-black ",
+      "bg-clip-text text-transparent bg-gradient-to-r from-cyan-500 to-cyan-300",
   },
   {
     value: "green",
     label: "Sức khỏe",
     customTailwindTextTransparentColor:
-      "bg-clip-text text-transparent bg-gradient-to-r from-green-500 to-black ",
+      "bg-clip-text text-transparent bg-gradient-to-r from-green-500 to-green-300",
   },
   {
-    value: "cyan",
+    value: "lime",
     label: "Du lịch",
     customTailwindTextTransparentColor:
-      "bg-clip-text text-transparent bg-gradient-to-r from-cyan-500 to-black ",
+      "bg-clip-text text-transparent bg-gradient-to-r from-orange-500 to-orange-300",
   },
   {
     value: "black",
     label: "Riêng tư",
     customTailwindTextTransparentColor:
-      "bg-clip-text text-transparent bg-gradient-to-r from-black to-black ",
+      "bg-clip-text text-transparent bg-gradient-to-r from-gray-700 to-gray-100",
   },
 ];
 

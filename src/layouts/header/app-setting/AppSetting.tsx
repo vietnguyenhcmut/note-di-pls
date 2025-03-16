@@ -1,4 +1,3 @@
-import { StaticAppColor } from "@/static-app-color/StaticAppColor";
 import { Button, Popover } from "antd";
 import { FaGear } from "react-icons/fa6";
 import useThemeStore from "@/store/useTheme";
@@ -20,9 +19,9 @@ const AppSetting = () => {
   return (
     <Popover content={content}>
       <div
-        className={`${themeContainer["app.common.borderAll.color"]} rounded-lg h-10 w-10 flex justify-center items-center hover:opacity-50`}
+        className={`${themeContainer["app.common.borderAll.color"]} ${themeContainer["app.common.text.color"]} rounded-lg h-10 w-10 flex justify-center items-center hover:opacity-50`}
       >
-        <FaGear className="" style={{ color: StaticAppColor }} />
+        <FaGear className="" />
       </div>
     </Popover>
   );

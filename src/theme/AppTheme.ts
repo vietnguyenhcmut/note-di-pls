@@ -7,6 +7,7 @@ export type AppThemeProps = {
   "app.common.borderTop.color": string;
   "app.common.borderBottom.color": string;
   "app.mainContent.background.color": string;
+  "app.noteItem.hover.background.color": string;
 };
 
 export const LightWhiteBlack: AppThemeProps = {
@@ -18,6 +19,7 @@ export const LightWhiteBlack: AppThemeProps = {
   "app.common.borderTop.color": "border-t border-gray-200",
   "app.common.borderBottom.color": "border-b border-gray-200",
   "app.mainContent.background.color": "bg-gray-50",
+  "app.noteItem.hover.background.color": "bg-gray-100",
 };
 
 export const DarkGrayWhite: AppThemeProps = {
@@ -29,4 +31,5 @@ export const DarkGrayWhite: AppThemeProps = {
   "app.common.borderTop.color": "border-t border-gray-800",
   "app.common.borderBottom.color": "border-b border-gray-800",
   "app.mainContent.background.color": "bg-gray-950",
+  "app.noteItem.hover.background.color": "bg-gray-600",
 };

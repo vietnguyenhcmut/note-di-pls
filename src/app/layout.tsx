@@ -36,10 +36,7 @@ export default function RootLayout({
             <div className="h-full" style={{ width: "400px" }}>
               <LeftBar />
             </div>
-            <div
-              className={`transition-all duration-500 h-full pr-2 pb-2`}
-              style={{ width: "calc(100% - 400px)" }}
-            >
+            <div style={{ width: "calc(100% - 400px)" }}>
               <MainContent>{children}</MainContent>
             </div>
           </div>

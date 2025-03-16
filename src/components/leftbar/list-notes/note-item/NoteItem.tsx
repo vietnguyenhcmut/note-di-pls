@@ -1,3 +1,4 @@
+"use client";
 import useThemeStore from "@/store/useTheme";
 import { NoteTypeProps } from "../../select-note-types/SelectNoteTypes";
 
@@ -17,9 +18,11 @@ const NoteItem: React.FC<NoteItemProps> = ({
   const { themeContainer } = useThemeStore();
 
   return (
-    <div className="w-full hover:bg-gray-100 hover:opacity-75 rounded-xl p-2 cursor-pointer transition-all duration-100">
+    <div
+      className={`w-full hover:opacity-50 rounded-xl p-2 cursor-pointer transition-all duration-100`}
+    >
       <p
-        className={`font-bold bg-clip-text text-transparent bg-gradient-to-r from-${noteType.customTailwindTextTransparentColor}-500 to-black `}
+        className={`font-bold ${noteType.customTailwindTextTransparentColor}`}
         style={{ fontSize: "18px" }}
       >
         {title}
@@ -31,10 +34,6 @@ const NoteItem: React.FC<NoteItemProps> = ({
         {brief}
       </p>
       <div className="flex flex-row items-center justify-start gap-2">
-        {/* <MdCircle
-          className={`opacity-40 ${themeContainer["app.common.text.color"]}`}
-          style={{ fontSize: "8px" }}
-        /> */}
         <p
           className={`text-sm opacity-40 ${themeContainer["app.common.text.color"]}`}
           style={{ fontSize: "20px" }}
