@@ -1,5 +1,11 @@
 This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
 
+## Summary
+This is a project to help the users manage their notes. 
+- Frontend: NextJS, Ant Design
+- Backend: NestJS
+For basic purpose, I only use backend right in this project, integrated with the frontend environment, no databases, only text files to contain texts.
+
 ## Getting Started
 First, Clone the project to local.
 
