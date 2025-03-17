@@ -1,4 +1,4 @@
-import { Controller, Post, Get, Body } from '@nestjs/common';
+import { Controller, Post, Get, Body, Param } from '@nestjs/common';
 import { NotesService } from './notes.service';
 
 @Controller('notes')
@@ -10,6 +10,7 @@ export class NotesController {
     @Body()
     body: {
       id: string;
+      type: string;
       title: string;
       brief: string;
       content: string;
@@ -18,11 +19,17 @@ export class NotesController {
   ) {
     return this.notesService.createNewNote(
       body.id,
+      body.type,
       body.title,
       body.brief,
       body.content,
       body.date,
     );
+  }
+
+  @Get(':filename')
+  async getNote(@Param('filename') filename: string) {
+    return await this.notesService.getNoteContent(filename);
   }
 
   @Get()
